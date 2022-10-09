@@ -1,1 +1,30 @@
 /* You can add global styles to this file, and also import other style files */
+@import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
+
+article{
+    background: url(/assets/tb_back4.png) 100%/cover no-repeat;
+    box-shadow: inset rgb(71,71,71) -10px -10px 25px,
+                   inset rgb(71,71,71) 10px 10px 25px;
+}
+body{
+    background-image: url(/assets/sp_back.jpg);
+    
+}
+
+h2{
+    color: maroon;
+    background-color: azure;
+}
+footer{
+    text-align: center;
+    background-color: rgb(129, 79, 79);
+    color:cornsilk;
+    margin-top: 20px;
+    height: 20px;
+    font-size:small;
+    font-style:italic;
+}
+img#pimg{
+    width:180px;
+    height:180px;
+}

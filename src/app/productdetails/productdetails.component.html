@@ -1,0 +1,12 @@
+<h1>Product Details Page</h1>
+<h3>Product {{product.productCode}}</h3>
+
+<p>Followings are your product details</p>
+<ul class="list-group text-center">
+    <li class="list-group-item"><img id="pimg" [src]="product.imgSrc" class="card-img-top" alt="..."></li>
+    <li class="list-group-item">Id: {{product._id}}</li>
+    <li class="list-group-item">Product Code : {{product.productCode}}</li>
+    <li class="list-group-item">Product Name: {{product.productName}}</li>
+    <li class="list-group-item">Price: {{product.listPrice}}</li>
+    
+</ul>

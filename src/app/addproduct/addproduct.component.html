@@ -1,0 +1,57 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-6 offset-3">
+            <h2 class="text-danger">Products Addition Form</h2>
+            <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+                <div class="form-group">
+                    <label>Product Code</label>
+                    <input type="text" formControlName="productCode" class="form-control" [(ngModel)]="product.productCode"
+                    [ngClass]="{'is-invalid':submitted && form['productCode'].errors}">
+
+                    <div *ngIf="submitted && form['productCode'].errors" class="invalid-feedback">
+                        <div *ngIf="form['productCode'].errors['required']">
+                            Product Code cannot be Empty
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label>Product Name</label>
+                    <input type="text" formControlName="productName" class="form-control" [(ngModel)]="product.productName"
+                    [ngClass]="{'is-invalid':submitted && form['productName'].errors}">
+
+                    <div *ngIf="submitted && form['productName'].errors" class="invalid-feedback">
+                        <div *ngIf="form['productName'].errors['required']">
+                            Product Name cannot be Empty
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label>Product Price</label>
+                    <input type="text" formControlName="listPrice" class="form-control"
+                    [ngClass]="{'is-invalid':submitted && form['listPrice'].errors}" [(ngModel)]="product.listPrice">
+                    <div *ngIf="submitted && form['listPrice'].errors" class="invalid-feedback">
+                        <div *ngIf="form['listPrice'].errors['required']">
+                            List Price cannot be Empty
+                        </div>
+    
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label>Product Image</label>
+                    <input type="text" formControlName="imgSrc" class="form-control" [(ngModel)]="product.imgSrc"
+                    [ngClass]="{'is-invalid':submitted && form['imgSrc'].errors}">
+
+                    <div *ngIf="submitted && form['imgSrc'].errors" class="invalid-feedback">
+                        <div *ngIf="form['imgSrc'].errors['required']">
+                            Product Image cannot be Empty
+                        </div>
+                    </div>
+                </div>
+                <br>
+                <div class="form-group">
+                    <button class="btn btn-primary">Add Product</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
